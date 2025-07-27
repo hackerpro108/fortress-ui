@@ -41,7 +41,7 @@ const StatCard = ({ icon, title, value, unit, total, isLoading }) => {
 
 // Hàm gọi API không thay đổi
 const fetchVpsStats = async () => {
-  const res = await fetch('/api/stats');
+  const res = await fetch('https://status.lohi.io.vn/api/stats');
   if (!res.ok) throw new Error('Network response was not ok');
   return res.json();
 };
